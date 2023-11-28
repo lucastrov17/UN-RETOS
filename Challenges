@@ -1,0 +1,29 @@
+#include <iostream>
+
+int main() {
+    double x, y;
+    std::cout << "Ingrese la coordenada x: ";
+    std::cin >> x;
+    std::cout << "Ingrese la coordenada y: ";
+    std::cin >> y;
+
+    if (x > 0 && y > 0)
+        std::cout << "El punto (" << x << ", " << y << ") está en el primer cuadrante.\n";
+    else if (x < 0 && y > 0)
+        std::cout << "El punto (" << x << ", " << y << ") está en el segundo cuadrante.\n";
+    else if (x < 0 && y < 0)
+        std::cout << "El punto (" << x << ", " << y << ") está en el tercer cuadrante.\n";
+    else if (x > 0 && y < 0)
+        std::cout << "El punto (" << x << ", " << y << ") está en el cuarto cuadrante.\n";
+    else
+        std::cout << "El punto (" << x << ", " << y << ") está en el origen.\n";
+
+    if (y > -x)
+        std::cout << "El punto (" << x << ", " << y << ") está por encima de la recta y = -x.\n";
+    else if (y < -x)
+        std::cout << "El punto (" << x << ", " << y << ") está por debajo de la recta y = -x.\n";
+    else
+        std::cout << "El punto (" << x << ", " << y << ") está en la recta y = -x.\n";
+
+    return 0;
+}
